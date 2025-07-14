@@ -1,5 +1,5 @@
 *SPEF "ieee 1481-1999"
-*DESIGN "CF_SRAM_4096x32_wb_wrapper"
+*DESIGN "CF_SRAM_4096x32"
 *DATE "12:27:16 Sunday July 13, 2025"
 *VENDOR "The OpenROAD Project"
 *PROGRAM "OpenROAD"

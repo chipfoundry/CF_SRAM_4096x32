@@ -1,4 +1,4 @@
-module CF_SRAM_4096x32_wb_wrapper (VGND,
+module CF_SRAM_4096x32 (VGND,
     VPWR,
     wb_clk_i,
     wb_rst_i,
