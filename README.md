@@ -25,29 +25,6 @@ The 4096x32 SRAM uses the following address mapping:
 - Address bits [11:10]: Select which 1024x32 SRAM macro (00, 01, 10, 11)
 - Address bits [9:0]: Word address within each 1024x32 SRAM
 
-## Usage
-
-To use this SRAM in your design:
-
-```verilog
-`include "path/to/CF_SRAM_4096x32_wb_wrapper.v"
-
-CF_SRAM_4096x32_wb_wrapper #(
-    .WIDTH(14)  // 14-bit address width
-) sram_inst (
-    .wb_clk_i   (clk),
-    .wb_rst_i   (rst),
-    .wbs_stb_i  (stb),
-    .wbs_cyc_i  (cyc),
-    .wbs_we_i   (we),
-    .wbs_sel_i  (sel),
-    .wbs_dat_i  (dat_i),
-    .wbs_adr_i  (adr),
-    .wbs_ack_o  (ack),
-    .wbs_dat_o  (dat_o)
-);
-```
-
 ## Dependencies
 
 This macro depends on the CF_SRAM_1024x32 macro, which must be available in your design. 
