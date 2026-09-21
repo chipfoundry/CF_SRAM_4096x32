@@ -1,0 +1,12 @@
+puts "Reading extracted layout..."
+set layout [readnet spice /work/signoff/lvs/ext/CF_SRAM_4096x32.gds.spice]
+set source [readnet spice /dev/null]
+foreach file [glob /pdkroot/sky130A/libs.ref/sky130_fd_sc_hd/spice/*.spice] {
+    puts "Reading source $file..."
+    readnet spice $file $source
+}
+readnet verilog /work/signoff/lvs/CF_SRAM_4096x32.lvs.v $source
+lvs "$layout CF_SRAM_4096x32" "$source CF_SRAM_4096x32" \
+    /work/signoff/lvs/sky130A_setup.tcl \
+    /work/signoff/lvs/lvs.report -blackbox -json \
+    -noflatten=/work/signoff/lvs/noflatten.glob
