@@ -68,6 +68,9 @@ the ignored `.cache` directory:
 - Sky130 HD standard-cell models at commit
   `ac7fb61f06e6470b94e8afdf7c25268f62fbd7b1`
 
+Pull requests and pushes to `master` run the same full suite in GitHub
+Actions (`make test`) after installing Icarus Verilog.
+
 Install `iverilog`, `vvp`, Git, Python 3, and `curl`, then run:
 
 ```sh

@@ -19,3 +19,19 @@ jobs:
           sudo apt-get install --yes klayout
       - name: Check netlist and GDS invariants
         run: make verify
+
+  simulation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Icarus Verilog
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes iverilog
+      - name: Cache simulation dependencies
+        uses: actions/cache@v4
+        with:
+          path: .cache
+          key: sim-deps-${{ hashFiles('Makefile', 'hdl/gl/CF_SRAM_4096x32.v', 'scripts/prepare_gl_models.py') }}
+      - name: Run RTL and functional GL regression
+        run: make test
