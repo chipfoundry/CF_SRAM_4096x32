@@ -1,0 +1,21 @@
+name: Verify delivered views
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+
+permissions:
+  contents: read
+
+jobs:
+  views:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install KLayout
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes klayout
+      - name: Check netlist and GDS invariants
+        run: make verify
