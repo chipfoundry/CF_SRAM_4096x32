@@ -56,3 +56,50 @@ The previous mismatched stub module caused synthesis to omit `WLOFF`.
 Run `make verify` to check that every child-LEF pin is connected on all four
 SRAM instances and that no connected met1 shape in the GDS touches two signal
 pins on one child instance. The GDS check requires KLayout.
+
+## Functional simulation
+
+The self-checking SystemVerilog regression runs the same Wishbone transactions
+against the RTL hierarchy and the hardened gate-level netlist. It uses Icarus
+Verilog and automatically downloads these pinned simulation dependencies into
+the ignored `.cache` directory:
+
+- `CF_SRAM_1024x32-v1.2.3`, including its nominal 1.8 V, 25 C model
+- Sky130 HD standard-cell models at commit
+  `ac7fb61f06e6470b94e8afdf7c25268f62fbd7b1`
+
+Install `iverilog`, `vvp`, Git, Python 3, and `curl`, then run:
+
+```sh
+make test-quick                 # short RTL and GL smoke regression
+make test                       # full RTL and GL regression
+make test SEED=12345            # reproduce or vary random traffic
+make test-rtl                   # full RTL only
+make test-gl                    # full functional GL only
+make test-rtl VCD=1             # also write build/sram_4096x32.vcd
+make lint-rtl lint-gl           # elaboration checks
+make verify-interface           # hardened child-macro pin connectivity
+```
+
+`make clean` removes generated simulation products while preserving downloaded
+dependencies. `make distclean` removes both.
+
+The full suite checks reset, invalid and back-to-back Wishbone cycles, ACK and
+idle-data behavior, every bank boundary, bank isolation, all 16 byte-enable
+masks, zero-select writes, byte-address and upper-address aliasing, a
+full-depth March-style sweep of all 4096 words, and 2000 reproducible random
+transactions. Reads are checked against a byte-aware reference memory, and RTL
+and GL runs report a final signature for comparison.
+
+On 2026-09-21, RTL and functional GL each passed 119,982 checks across 26,663
+transactions with seed `1099956274`; both produced signature `062c15b2`.
+Additional quick cross-checks passed with seeds `1` and `2147483646`, with
+matching RTL/GL signatures for each seed. The hardened macro-interface check
+also passed for all four child instances, and the KLayout check found no met1
+signal-pin shorts across the 117 checked signal pins per instance.
+
+This is a zero-delay functional GL regression. The repository does not contain
+an SDF file, so these results do not establish post-layout setup/hold timing.
+Timing signoff still requires SDF generation/back-annotation or STA with the
+appropriate multi-corner Liberty views. Functional simulation also does not
+replace DRC, LVS, power-integrity analysis, or silicon characterization.
