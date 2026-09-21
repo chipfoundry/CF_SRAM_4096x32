@@ -112,15 +112,15 @@ module CF_SRAM_4096x32_wb_wrapper #(parameter WIDTH = 14) (
         .WLBI       (1'b0),             // Tie to 0 (example)
         .WLOFF      (1'b0),             // Tie to 0 (example)
     `ifdef USE_PG_PIN
-        .vgnd       (1'b0),             // Tie to ground
-        .vnb        (1'b0),             // Tie to ground (body bias)
-        .vpb        (1'b1),             // Tie to VDD (body bias)
-        .vpwra      (1'b1),             // Tie to VDD
+        .vgnd       (VGND),
+        .vnb        (VGND),
+        .vpb        (VPWR),
+        .vpwra      (VPWR),
     `endif
         .vpwrac     (1'b1),             // Tie to VDD
     `ifdef USE_PG_PIN
-        .vpwrm      (1'b1),             // Tie to VDD
-        .vpwrp      (1'b1),             // Tie to VDD
+        .vpwrm      (VPWR),
+        .vpwrp      (VPWR),
     `endif
         .vpwrpc     (1'b1)              // Tie to VDD
     );

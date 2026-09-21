@@ -1,0 +1,296 @@
+BEGIN: Mon Sep 21 15:18:37 2026
+Extracting as digital. Top ports unique.
+
+Magic 8.3 revision 471 - Compiled on Thu Aug 20 09:43:38 UTC 2026.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Processing system .magicrc file
+Sourcing design magicrc.well for technology sky130A ...
+2 Magic internal units = 1 Lambda
+Input style sky130(): scaleFactor=2, multiplier=2
+The following types are not handled by extraction and will be treated as non-electrical types:
+    ubm 
+Scaled tech values by 2 / 1 to match internal grid scaling
+Loading "/work/signoff/lvs/ext/abstract.tcl" from command line.
+Abstracting
+CIF input style is now "sky130()"
+Abstracting /work/gds/CF_SRAM_4096x32.gds
+Warning: Calma reading is not undoable!  I hope that's OK.
+Library written using GDS-II Release 6.0
+Library name: LIB
+Reading "CF_SRAM_1024x32_macro".
+CIF file read warning: CIF style sky130(): units rescaled by factor of 5 / 1
+Error while reading cell "CF_SRAM_1024x32_macro" (byte position 44100): Unknown layer/datatype in boundary, layer=67 type=10
+Error while reading cell "CF_SRAM_1024x32_macro" (byte position 44164): Unknown layer/datatype in boundary, layer=68 type=10
+Error while reading cell "CF_SRAM_1024x32_macro" (byte position 44228): Unknown layer/datatype in boundary, layer=69 type=10
+Reading "sky130_fd_sc_hd__diode_2".
+Reading "sky130_fd_sc_hd__fill_2".
+Reading "sky130_fd_sc_hd__fill_4".
+Reading "sky130_fd_sc_hd__fill_1".
+Reading "sky130_ef_sc_hd__decap_40_12".
+Reading "sky130_fd_sc_hd__fill_8".
+Reading "sky130_fd_sc_hd__decap_3".
+Reading "sky130_fd_sc_hd__tapvpwrvgnd_1".
+Reading "sky130_fd_sc_hd__inv_16".
+Reading "sky130_fd_sc_hd__inv_2".
+Reading "sky130_fd_sc_hd__nand2_4".
+Reading "sky130_fd_sc_hd__and3_4".
+Reading "sky130_fd_sc_hd__and4b_2".
+Reading "sky130_fd_sc_hd__and3b_1".
+Reading "sky130_fd_sc_hd__or2_4".
+Reading "sky130_fd_sc_hd__nor2_4".
+Reading "sky130_fd_sc_hd__mux2_2".
+Reading "sky130_fd_sc_hd__o221a_1".
+Reading "sky130_fd_sc_hd__mux2_1".
+Reading "sky130_fd_sc_hd__o221a_2".
+Reading "sky130_fd_sc_hd__mux2_4".
+Reading "sky130_fd_sc_hd__dfrtp_4".
+Reading "sky130_fd_sc_hd__clkbuf_16".
+Reading "sky130_fd_sc_hd__clkbuf_4".
+Reading "sky130_fd_sc_hd__clkbuf_8".
+Reading "sky130_fd_sc_hd__buf_2".
+Reading "sky130_fd_sc_hd__buf_4".
+Reading "sky130_fd_sc_hd__buf_8".
+Reading "sky130_fd_sc_hd__buf_6".
+Reading "sky130_fd_sc_hd__dlygate4sd3_1".
+Reading "sky130_fd_sc_hd__buf_12".
+Reading "CF_SRAM_1024x32".
+Reading "sky130_fd_sc_hd__conb_1".
+Reading "sky130_fd_sc_hd__buf_1".
+Reading "sky130_fd_sc_hd__clkbuf_2".
+Reading "VIA_via3_4_870_1760_4_2_400_400".
+Reading "VIA_via3_4_580_1760_4_1_400_400".
+Reading "VIA_via3_4_320_1760_4_1_400_400".
+Reading "VIA_via3_4_640_1760_4_1_400_400".
+Reading "VIA_via3_4_550_1760_4_1_400_400".
+Reading "VIA_via3_4_470_1760_4_1_400_400".
+Reading "VIA_via3_4_520_1760_4_1_400_400".
+Reading "VIA_via4_5_3100_1760_4_7_400_400".
+Reading "VIA_via4_5_1620_1760_4_4_400_400".
+Reading "VIA_via3_4_1760_1760_4_4_400_400".
+Reading "VIA_via2_3_1760_480_1_5_320_320".
+Reading "VIA_via3_4_880_1760_4_2_400_400".
+Reading "VIA_via3_4_700_1760_4_1_400_400".
+Reading "VIA_via3_4_900_1760_4_2_400_400".
+Reading "VIA_via3_4_1000_1760_4_2_400_400".
+Reading "VIA_L1M1_PR_MR".
+Reading "VIA_M1M2_PR".
+Reading "VIA_M2M3_PR".
+Reading "VIA_M3M4_PR".
+Reading "CF_SRAM_4096x32".
+    5000 uses
+    10000 uses
+    15000 uses
+    20000 uses
+
+TIME: read GDS: 00:00:03 
+
+
+TIME: create subcut: 00:00:00 
+
+Abstracting CF_SRAM_1024x32
+instance count:1 port count:103
+Full size 0 600 77574 61264
+Setting deletion window size to 102400. Estimate 0 steps.
+Step 1/0: deleting 0 objects at 0 600 102400 103000
+Deleting 0 final objects
+Deleting via1
+Deleting via2
+Deleting metal3
+Generating LEF output CF_SRAM_1024x32.lef for cell CF_SRAM_1024x32:
+Diagnostic:  Write LEF header for cell CF_SRAM_1024x32
+Diagnostic:  Writing LEF output for cell CF_SRAM_1024x32
+Diagnostic:  Scale value is 0.005000
+Abstracting sky130_fd_sc_hd__fill_1
+instance count:0 port count:5
+Abstracting sky130_fd_sc_hd__fill_2
+instance count:0 port count:5
+Abstracting sky130_fd_sc_hd__fill_4
+instance count:0 port count:5
+Abstracting sky130_fd_sc_hd__fill_8
+instance count:0 port count:5
+Abstracting sky130_fd_sc_hd__tapvpwrvgnd_1
+instance count:0 port count:3
+
+TIME: create abstract: 00:00:00 
+
+Using technology "sky130A", version 1.0.493-0-g0fe599b
+
+Magic 8.3 revision 471 - Compiled on Thu Aug 20 09:43:38 UTC 2026.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Processing system .magicrc file
+Sourcing design magicrc.well for technology sky130A ...
+2 Magic internal units = 1 Lambda
+Input style sky130(): scaleFactor=2, multiplier=2
+The following types are not handled by extraction and will be treated as non-electrical types:
+    ubm 
+Scaled tech values by 2 / 1 to match internal grid scaling
+Loading "/work/signoff/lvs/ext/extract.tcl" from command line.
+Extracting with top ports unique (digital)
+CIF input style is now "sky130()"
+Using abstracted CF_SRAM_1024x32
+Reading LEF data from file /work/signoff/lvs/ext/CF_SRAM_1024x32.lef.
+This action cannot be undone.
+LEF read: Processed 1285 lines.
+Flattening 
+
+Extracting /work/gds/CF_SRAM_4096x32.gds
+Warning: Calma reading is not undoable!  I hope that's OK.
+Library written using GDS-II Release 6.0
+Library name: LIB
+Reading "CF_SRAM_1024x32_macro".
+CIF file read warning: CIF style sky130(): units rescaled by factor of 5 / 1
+Error while reading cell "CF_SRAM_1024x32_macro" (byte position 44100): Unknown layer/datatype in boundary, layer=67 type=10
+Error while reading cell "CF_SRAM_1024x32_macro" (byte position 44164): Unknown layer/datatype in boundary, layer=68 type=10
+Error while reading cell "CF_SRAM_1024x32_macro" (byte position 44228): Unknown layer/datatype in boundary, layer=69 type=10
+Reading "sky130_fd_sc_hd__diode_2".
+Reading "sky130_fd_sc_hd__fill_2".
+Reading "sky130_fd_sc_hd__fill_4".
+Reading "sky130_fd_sc_hd__fill_1".
+Reading "sky130_ef_sc_hd__decap_40_12".
+Reading "sky130_fd_sc_hd__fill_8".
+Reading "sky130_fd_sc_hd__decap_3".
+Reading "sky130_fd_sc_hd__tapvpwrvgnd_1".
+Reading "sky130_fd_sc_hd__inv_16".
+Reading "sky130_fd_sc_hd__inv_2".
+Reading "sky130_fd_sc_hd__nand2_4".
+Reading "sky130_fd_sc_hd__and3_4".
+Reading "sky130_fd_sc_hd__and4b_2".
+Reading "sky130_fd_sc_hd__and3b_1".
+Reading "sky130_fd_sc_hd__or2_4".
+Reading "sky130_fd_sc_hd__nor2_4".
+Reading "sky130_fd_sc_hd__mux2_2".
+Reading "sky130_fd_sc_hd__o221a_1".
+Reading "sky130_fd_sc_hd__mux2_1".
+Reading "sky130_fd_sc_hd__o221a_2".
+Reading "sky130_fd_sc_hd__mux2_4".
+Reading "sky130_fd_sc_hd__dfrtp_4".
+Reading "sky130_fd_sc_hd__clkbuf_16".
+Reading "sky130_fd_sc_hd__clkbuf_4".
+Reading "sky130_fd_sc_hd__clkbuf_8".
+Reading "sky130_fd_sc_hd__buf_2".
+Reading "sky130_fd_sc_hd__buf_4".
+Reading "sky130_fd_sc_hd__buf_8".
+Reading "sky130_fd_sc_hd__buf_6".
+Reading "sky130_fd_sc_hd__dlygate4sd3_1".
+Reading "sky130_fd_sc_hd__buf_12".
+Reading "CF_SRAM_1024x32".
+Warning:  cell CF_SRAM_1024x32 already existed before reading GDS!
+Using pre-existing cell definition
+Reading "sky130_fd_sc_hd__conb_1".
+Reading "sky130_fd_sc_hd__buf_1".
+Reading "sky130_fd_sc_hd__clkbuf_2".
+Reading "VIA_via3_4_870_1760_4_2_400_400".
+Reading "VIA_via3_4_580_1760_4_1_400_400".
+Saving contents of cell VIA_via3_4_580_1760_4_1_400_400
+Reading "VIA_via3_4_320_1760_4_1_400_400".
+Saving contents of cell VIA_via3_4_320_1760_4_1_400_400
+Reading "VIA_via3_4_640_1760_4_1_400_400".
+Saving contents of cell VIA_via3_4_640_1760_4_1_400_400
+Reading "VIA_via3_4_550_1760_4_1_400_400".
+Saving contents of cell VIA_via3_4_550_1760_4_1_400_400
+Reading "VIA_via3_4_470_1760_4_1_400_400".
+Saving contents of cell VIA_via3_4_470_1760_4_1_400_400
+Reading "VIA_via3_4_520_1760_4_1_400_400".
+Saving contents of cell VIA_via3_4_520_1760_4_1_400_400
+Reading "VIA_via4_5_3100_1760_4_7_400_400".
+Reading "VIA_via4_5_1620_1760_4_4_400_400".
+Reading "VIA_via3_4_1760_1760_4_4_400_400".
+Reading "VIA_via2_3_1760_480_1_5_320_320".
+Saving contents of cell VIA_via2_3_1760_480_1_5_320_320
+Reading "VIA_via3_4_880_1760_4_2_400_400".
+Reading "VIA_via3_4_700_1760_4_1_400_400".
+Saving contents of cell VIA_via3_4_700_1760_4_1_400_400
+Reading "VIA_via3_4_900_1760_4_2_400_400".
+Reading "VIA_via3_4_1000_1760_4_2_400_400".
+Reading "VIA_L1M1_PR_MR".
+Saving contents of cell VIA_L1M1_PR_MR
+Reading "VIA_M1M2_PR".
+Saving contents of cell VIA_M1M2_PR
+Reading "VIA_M2M3_PR".
+Saving contents of cell VIA_M2M3_PR
+Reading "VIA_M3M4_PR".
+Saving contents of cell VIA_M3M4_PR
+Reading "CF_SRAM_4096x32".
+    5000 uses
+    10000 uses
+    15000 uses
+    20000 uses
+
+TIME: read GDS: 00:00:03 
+
+
+TIME: add subcut: 00:00:00 
+
+Abstracting CF_SRAM_1024x32
+Abstracting sky130_fd_sc_hd__fill_1
+Abstracting sky130_fd_sc_hd__fill_2
+Abstracting sky130_fd_sc_hd__fill_4
+Abstracting sky130_fd_sc_hd__fill_8
+Abstracting sky130_fd_sc_hd__tapvpwrvgnd_1
+
+TIME: set abstract: 00:00:00 
+
+Processing sky130_fd_sc_hd__decap_3
+Processing VIA_via4_5_3100_1760_4_7_400_400
+Processing VIA_via3_4_1760_1760_4_4_400_400
+Processing sky130_ef_sc_hd__decap_40_12
+Processing sky130_fd_sc_hd__buf_1
+Processing sky130_fd_sc_hd__buf_12
+Processing sky130_fd_sc_hd__dlygate4sd3_1
+Processing sky130_fd_sc_hd__clkbuf_2
+Processing sky130_fd_sc_hd__buf_4
+Processing sky130_fd_sc_hd__clkbuf_16
+Processing sky130_fd_sc_hd__diode_2
+Processing sky130_fd_sc_hd__o221a_2
+Processing sky130_fd_sc_hd__o221a_1
+Processing sky130_fd_sc_hd__inv_2
+Processing sky130_fd_sc_hd__nand2_4
+Processing sky130_fd_sc_hd__clkbuf_4
+Processing VIA_via3_4_1000_1760_4_2_400_400
+Processing VIA_via3_4_900_1760_4_2_400_400
+Processing VIA_via3_4_880_1760_4_2_400_400
+Processing sky130_fd_sc_hd__buf_2
+Processing sky130_fd_sc_hd__mux2_1
+Processing sky130_fd_sc_hd__nor2_4
+Processing sky130_fd_sc_hd__and4b_2
+Processing VIA_via3_4_870_1760_4_2_400_400
+Processing sky130_fd_sc_hd__clkbuf_8
+Processing sky130_fd_sc_hd__buf_8
+Processing sky130_fd_sc_hd__dfrtp_4
+Processing sky130_fd_sc_hd__or2_4
+Processing sky130_fd_sc_hd__and3b_1
+Processing sky130_fd_sc_hd__inv_16
+Processing sky130_fd_sc_hd__mux2_2
+Processing sky130_fd_sc_hd__and3_4
+Processing sky130_fd_sc_hd__conb_1
+Processing sky130_fd_sc_hd__buf_6
+Processing sky130_fd_sc_hd__mux2_4
+Processing VIA_via4_5_1620_1760_4_4_400_400
+Processing CF_SRAM_4096x32
+The following types are not handled by extraction and will be treated as non-electrical types:
+    ubm 
+Extraction style is now "ngspice()"
+Extracting sky130_fd_sc_hd__tapvpwrvgnd_1 into sky130_fd_sc_hd__tapvpwrvgnd_1.ext:
+Extracting sky130_fd_sc_hd__fill_1 into sky130_fd_sc_hd__fill_1.ext:
+Extracting sky130_fd_sc_hd__fill_2 into sky130_fd_sc_hd__fill_2.ext:
+Extracting sky130_fd_sc_hd__fill_4 into sky130_fd_sc_hd__fill_4.ext:
+Extracting sky130_fd_sc_hd__fill_8 into sky130_fd_sc_hd__fill_8.ext:
+Extracting CF_SRAM_1024x32 into CF_SRAM_1024x32.ext:
+Extracting CF_SRAM_4096x32 into CF_SRAM_4096x32.ext:
+END: Mon Sep 21 15:19:05 2026
+Runtime: 0:00:36 (hh:mm:ss)
+CF_SRAM_4096x32: 433 errors
+Total of 433 errors (check feedback entries).
+
+TIME: extract: 00:00:24 
+
+
+TIME: netlist: 00:00:00 
+
+Using technology "sky130A", version 1.0.493-0-g0fe599b
+END: Mon Sep 21 15:19:11 2026
+Runtime: 0:00:34 (hh:mm:ss)
